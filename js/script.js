@@ -60,4 +60,57 @@ window.onclick = function (e) {
         menuToggle();
 };
 
+// Registration Form
+document.getElementsByClassName("register-top-btn")
+    var register = function(a) {
+        for (var b = document.getElementsByClassName("register-login"), c = document.getElementsByClassName("register-registration"), d = 0; d < btn.length; d++)
+            btn[d].classList.remove("active");
+        a.classList.add("active"),
+        c[0].classList.add("active"),
+        b[0].classList.remove("active")
+    }
+      , login = function(a) {
+        for (var b = document.getElementsByClassName("register-login"), c = document.getElementsByClassName("register-registration"), d = 0; d < btn.length; d++)
+            btn[d].classList.remove("active");
+        a.classList.add("active"),
+        b[0].classList.add("active"),
+        c[0].classList.remove("active")
+    }
+      , btn = document.getElementsByClassName("register-top-btn");
 
+
+// Aside Menu
+var headerButton = document.querySelector(".menu-button");
+var headerMenu = document.querySelector(".aside-wrap");
+var menuOpened = false;
+var menuToggle = function () {
+    checkMenuClass();
+    menuOpened = !menuOpened;
+    headerButton.classList.toggle("open");
+    headerMenu.classList.toggle("open");
+};
+
+function checkMenuClass() {
+    if (menuOpened == false) {
+        disableScroll();
+    }
+    else {
+        enableScroll();
+    }
+}  
+headerButton.onclick = menuToggle;
+window.onclick = function (e) {
+    if (menuOpened &&
+        !e.composedPath().includes(headerButton) &&
+        !e.composedPath().includes(headerMenu))
+        menuToggle();
+};
+
+
+// Custom Dropdown select
+
+$(document).ready(function() {
+  $('select').prettyDropdown({
+    width: "100%"
+  })
+});

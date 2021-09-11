@@ -3,10 +3,12 @@
 	<head>
 		<meta charset = "utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<title>Bycleanliness</title>   	
+    	<title>Главная - Fronel</title>   	
     	<link href="css/bootstrap.min.css" rel="stylesheet">
     	<link href="css/style.css" rel="stylesheet">
     	<link href="css/normalize.css" rel="stylesheet">
+    	<link href="css/prettydropdowns.css" rel="stylesheet">
+    	<link href="slick/slick.css" rel="stylesheet">
 	</head>
 	<body>
 		<header class="header">
@@ -34,7 +36,7 @@
 						</nav>
 					</div>
 					<div class="col-3 col-lg-2 order-lg-1 d-flex justify-content-end align-items-center">
-						<a href="#" class="user"><img src="img/icon-user.svg" alt="icon-user"></a>
+						<a href="#" class="user" data-toggle="modal" data-target="#registerModal"><img src="img/icon-user.svg" alt="icon-user"></a>
 						<button class="menu-button">
 							<span class="menu-button-line"></span>
 						</button>
@@ -52,7 +54,7 @@
 						<div class="col-md-8">
 							<h2 class="feature-title">NORD VPN</h2>
 							<p class="feature-desc">Поставщик услуг виртуальной частной сети. Он предоставляет настольные приложения для Windows, macOS и Linux, мобильные приложения для Android и iOS, а также приложение для AndroidTV. Также доступна ручная настройка беспроводных маршрутизаторов, устройств NAS и других платформ.</p>
-							<button type="button" class="btn btn-primary btn-lg">Купить</button>
+							<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#purchaseModal">Купить</button>
 						</div>
 					</div>
 				</div>					
@@ -63,7 +65,7 @@
 						<div class="col-md-8">
 							<h2 class="feature-title">IVI</h2>
 							<p class="feature-desc">ivi - крупнейший легальный онлайн-кинотеатр в России. Мобильное приложение ivi – это простой и удобный доступ к мировой коллекции лучших фильмов, популярным сериалам и целой вселенной мультфильмов.</p>
-							<button type="button" class="btn btn-danger btn-lg">Купить</button>
+							<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#purchaseModal">Купить</button>
 						</div>
 						<div class="col-md-4">
 							<img src="img/Ivi.svg" alt="feature-image" class="feature-img">
@@ -80,7 +82,7 @@
 						<div class="col-md-8">
 							<h2 class="feature-title">more.tv</h2>
 							<p class="feature-desc">Смотреть сериалы, фильмы, телепередачи и мультфильмы. В онлайн-сервисе more.tv все видео доступны в хорошем качестве hd бесплатно и по подписке.</p>
-							<button type="button" class="btn btn-dark btn-lg">Купить</button>
+							<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#purchaseModal">Купить</button>
 						</div>
 					</div>					
 				</div>
@@ -117,136 +119,133 @@
 									<h5 class="card-title">more.tv</h5>
 								</div>
 							</a>						
-						</div>										
+						</div>		
+						<div class="w-100 breakline"></div>
+						<div class="col-md-4 d-flex justify-content-center">
+							<a href="#" class="card product-item" >
+								<div class="card-img-wrap">
+									<img class="card-img-top" src="img/product-nordvpn.svg" alt="Card image cap" width="84" height="71">
+								</div>
+								<div class="card-body">
+							 		<h5 class="card-title">NORD VPN</h5>
+								</div>
+							</a>						
+						</div>
+						<div class="col-md-4 d-flex justify-content-center">
+							<a href="#" class="card product-item" >
+								<div class="card-img-wrap">
+									<img class="card-img-top" src="img/product-ivi.svg" alt="Card image cap" width="97" height="71">
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">IVI</h5>
+								</div>
+							</a>						
+						</div>
+						<div class="col-md-4 d-flex justify-content-center">
+							<a href="#" class="card product-item" >
+								<div class="card-img-wrap">
+									<img class="card-img-top" src="img/product-moretv.svg" alt="Card image cap" width="172" height="29">
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">more.tv</h5>
+								</div>
+							</a>						
+						</div>				
+						<div class="w-100 breakline"></div>
+						<div class="col-md-4 d-flex justify-content-center">
+							<a href="#" class="card product-item" >
+								<div class="card-img-wrap">
+									<img class="card-img-top" src="img/product-nordvpn.svg" alt="Card image cap" width="84" height="71">
+								</div>
+								<div class="card-body">
+							 		<h5 class="card-title">NORD VPN</h5>
+								</div>
+							</a>						
+						</div>
+						<div class="col-md-4 d-flex justify-content-center">
+							<a href="#" class="card product-item" >
+								<div class="card-img-wrap">
+									<img class="card-img-top" src="img/product-ivi.svg" alt="Card image cap" width="97" height="71">
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">IVI</h5>
+								</div>
+							</a>						
+						</div>
+						<div class="col-md-4 d-flex justify-content-center">
+							<a href="#" class="card product-item" >
+								<div class="card-img-wrap">
+									<img class="card-img-top" src="img/product-moretv.svg" alt="Card image cap" width="172" height="29">
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">more.tv</h5>
+								</div>
+							</a>						
+						</div>					
+						<div class="w-100 breakline"></div>
+						<div class="col-md-4 d-flex justify-content-center">
+							<a href="#" class="card product-item" >
+								<div class="card-img-wrap">
+									<img class="card-img-top" src="img/product-nordvpn.svg" alt="Card image cap" width="84" height="71">
+								</div>
+								<div class="card-body">
+							 		<h5 class="card-title">NORD VPN</h5>
+								</div>
+							</a>						
+						</div>
+						<div class="col-md-4 d-flex justify-content-center">
+							<a href="#" class="card product-item" >
+								<div class="card-img-wrap">
+									<img class="card-img-top" src="img/product-ivi.svg" alt="Card image cap" width="97" height="71">
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">IVI</h5>
+								</div>
+							</a>						
+						</div>
+						<div class="col-md-4 d-flex justify-content-center">
+							<a href="#" class="card product-item" >
+								<div class="card-img-wrap">
+									<img class="card-img-top" src="img/product-moretv.svg" alt="Card image cap" width="172" height="29">
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">more.tv</h5>
+								</div>
+							</a>						
+						</div>
+						<div class="w-100 breakline"></div>
+						<div class="col-md-4 d-flex justify-content-center">
+							<a href="#" class="card product-item" >
+								<div class="card-img-wrap">
+									<img class="card-img-top" src="img/product-nordvpn.svg" alt="Card image cap" width="84" height="71">
+								</div>
+								<div class="card-body">
+							 		<h5 class="card-title">NORD VPN</h5>
+								</div>
+							</a>						
+						</div>
+						<div class="col-md-4 d-flex justify-content-center">
+							<a href="#" class="card product-item" >
+								<div class="card-img-wrap">
+									<img class="card-img-top" src="img/product-ivi.svg" alt="Card image cap" width="97" height="71">
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">IVI</h5>
+								</div>
+							</a>						
+						</div>
+						<div class="col-md-4 d-flex justify-content-center">
+							<a href="#" class="card product-item" >
+								<div class="card-img-wrap">
+									<img class="card-img-top" src="img/product-moretv.svg" alt="Card image cap" width="172" height="29">
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">more.tv</h5>
+								</div>
+							</a>						
+						</div>						
 					</div>
-					<div class="row products">
-						<div class="col-md-4 d-flex justify-content-center">
-							<a href="#" class="card product-item" >
-								<div class="card-img-wrap">
-									<img class="card-img-top" src="img/product-nordvpn.svg" alt="Card image cap" width="84" height="71">
-								</div>
-								<div class="card-body">
-							 		<h5 class="card-title">NORD VPN</h5>
-								</div>
-							</a>						
-						</div>
-						<div class="col-md-4 d-flex justify-content-center">
-							<a href="#" class="card product-item" >
-								<div class="card-img-wrap">
-									<img class="card-img-top" src="img/product-ivi.svg" alt="Card image cap" width="97" height="71">
-								</div>
-								<div class="card-body">
-									<h5 class="card-title">IVI</h5>
-								</div>
-							</a>						
-						</div>
-						<div class="col-md-4 d-flex justify-content-center">
-							<a href="#" class="card product-item" >
-								<div class="card-img-wrap">
-									<img class="card-img-top" src="img/product-moretv.svg" alt="Card image cap" width="172" height="29">
-								</div>
-								<div class="card-body">
-									<h5 class="card-title">more.tv</h5>
-								</div>
-							</a>						
-						</div>										
-					</div>			
-					<div class="row products">
-						<div class="col-md-4 d-flex justify-content-center">
-							<a href="#" class="card product-item" >
-								<div class="card-img-wrap">
-									<img class="card-img-top" src="img/product-nordvpn.svg" alt="Card image cap" width="84" height="71">
-								</div>
-								<div class="card-body">
-							 		<h5 class="card-title">NORD VPN</h5>
-								</div>
-							</a>						
-						</div>
-						<div class="col-md-4 d-flex justify-content-center">
-							<a href="#" class="card product-item" >
-								<div class="card-img-wrap">
-									<img class="card-img-top" src="img/product-ivi.svg" alt="Card image cap" width="97" height="71">
-								</div>
-								<div class="card-body">
-									<h5 class="card-title">IVI</h5>
-								</div>
-							</a>						
-						</div>
-						<div class="col-md-4 d-flex justify-content-center">
-							<a href="#" class="card product-item" >
-								<div class="card-img-wrap">
-									<img class="card-img-top" src="img/product-moretv.svg" alt="Card image cap" width="172" height="29">
-								</div>
-								<div class="card-body">
-									<h5 class="card-title">more.tv</h5>
-								</div>
-							</a>						
-						</div>										
-					</div>					
-					<div class="row products">
-						<div class="col-md-4 d-flex justify-content-center">
-							<a href="#" class="card product-item" >
-								<div class="card-img-wrap">
-									<img class="card-img-top" src="img/product-nordvpn.svg" alt="Card image cap" width="84" height="71">
-								</div>
-								<div class="card-body">
-							 		<h5 class="card-title">NORD VPN</h5>
-								</div>
-							</a>						
-						</div>
-						<div class="col-md-4 d-flex justify-content-center">
-							<a href="#" class="card product-item" >
-								<div class="card-img-wrap">
-									<img class="card-img-top" src="img/product-ivi.svg" alt="Card image cap" width="97" height="71">
-								</div>
-								<div class="card-body">
-									<h5 class="card-title">IVI</h5>
-								</div>
-							</a>						
-						</div>
-						<div class="col-md-4 d-flex justify-content-center">
-							<a href="#" class="card product-item" >
-								<div class="card-img-wrap">
-									<img class="card-img-top" src="img/product-moretv.svg" alt="Card image cap" width="172" height="29">
-								</div>
-								<div class="card-body">
-									<h5 class="card-title">more.tv</h5>
-								</div>
-							</a>						
-						</div>										
-					</div>
-					<div class="row products">
-						<div class="col-md-4 d-flex justify-content-center">
-							<a href="#" class="card product-item" >
-								<div class="card-img-wrap">
-									<img class="card-img-top" src="img/product-nordvpn.svg" alt="Card image cap" width="84" height="71">
-								</div>
-								<div class="card-body">
-							 		<h5 class="card-title">NORD VPN</h5>
-								</div>
-							</a>						
-						</div>
-						<div class="col-md-4 d-flex justify-content-center">
-							<a href="#" class="card product-item" >
-								<div class="card-img-wrap">
-									<img class="card-img-top" src="img/product-ivi.svg" alt="Card image cap" width="97" height="71">
-								</div>
-								<div class="card-body">
-									<h5 class="card-title">IVI</h5>
-								</div>
-							</a>						
-						</div>
-						<div class="col-md-4 d-flex justify-content-center">
-							<a href="#" class="card product-item" >
-								<div class="card-img-wrap">
-									<img class="card-img-top" src="img/product-moretv.svg" alt="Card image cap" width="172" height="29">
-								</div>
-								<div class="card-body">
-									<h5 class="card-title">more.tv</h5>
-								</div>
-							</a>						
-						</div>										
-					</div>				
+			
 				</div>				
 			</section>
 			<section class="slider">
@@ -254,61 +253,28 @@
 					<div class="row">
 						<div class="col-lg-10 offset-lg-1">
 							<h2 class="slider-title">Отзывы</h2>
-							<div id="carouselReviews" class="carousel slide" data-ride="carousel">
-								<ol class="carousel-indicators">
-									<li data-target="#carouselReviews" data-slide-to="0" class="active"></li>
-									<li data-target="#carouselReviews" data-slide-to="1"></li>
-									<li data-target="#carouselReviews" data-slide-to="2"></li>
-								</ol>								
-								<div class="carousel-inner">
-									<div class="carousel-item active">
-										<div class="reviews-wrap">
-											<div class="review">
-												<img src="img/avatar.jpg" alt="review-avatar" class="review-img">
-												<p class="review-text">Текст комментарий отзыва в блоке отзывов рыба текст</p>
-											</div>
-											<div class="review">
-												<img src="img/avatar.jpg" alt="review-avatar" class="review-img">
-												<p class="review-text">Текст комментарий отзыва в блоке отзывов рыба текст</p>
-											</div>																			
-										</div>
-									</div>
-									<div class="carousel-item">
-										<div class="reviews-wrap">
-											<div class="review">
-												<img src="img/avatar.jpg" alt="review-avatar" class="review-img">
-												<p class="review-text">Текст комментарий отзыва в блоке отзывов рыба текст</p>
-											</div>
-											<div class="review">
-												<img src="img/avatar.jpg" alt="review-avatar" class="review-img">
-												<p class="review-text">Текст комментарий отзыва в блоке отзывов рыба текст</p>
-											</div>																			
-										</div>
-									</div>
-									<div class="carousel-item">
-										<div class="reviews-wrap">
-											<div class="review">
-												<img src="img/avatar.jpg" alt="review-avatar" class="review-img">
-												<p class="review-text">Текст комментарий отзыва в блоке отзывов рыба текст</p>
-											</div>
-											<div class="review">
-												<img src="img/avatar.jpg" alt="review-avatar" class="review-img">
-												<p class="review-text">Текст комментарий отзыва в блоке отзывов рыба текст</p>
-											</div>																			
-										</div>
-									</div>
-									<a class="carousel-control-prev" href="#carouselReviews" role="button" data-slide="prev">
-										<span class="carousel-control-prev-icon"></span>
-									</a>
-									<a class="carousel-control-next" href="#carouselReviews" role="button" data-slide="next">
-										<span class="carousel-control-next-icon"></span>
-									</a>									
+							<div class="slider-1">
+								<div class="review">
+									<img src="img/avatar.jpg" alt="review-avatar" class="review-img">
+									<p class="review-text">Текст комментарий отзыва в блоке отзывов рыба текст</p>
 								</div>
-							</div>							
+								<div class="review">
+									<img src="img/avatar.jpg" alt="review-avatar" class="review-img">
+									<p class="review-text">Текст комментарий отзыва в блоке отзывов рыба текст</p>
+								</div>
+								<div class="review">
+									<img src="img/avatar.jpg" alt="review-avatar" class="review-img">
+									<p class="review-text">Текст комментарий отзыва в блоке отзывов рыба текст</p>
+								</div>
+								<div class="review">
+									<img src="img/avatar.jpg" alt="review-avatar" class="review-img">
+									<p class="review-text">Текст комментарий отзыва в блоке отзывов рыба текст</p>
+								</div>															
+							</div>						
 						</div>
 					</div>
 				</div>
-			</section>
+			</section>		
 		</main>
 		<footer class="footer">
 			<div class="container">
@@ -316,7 +282,7 @@
 					<div class="col-md-3">
 						<h2 class="footer-title">Наши контакты</h2>
 					</div>
-					<div class="col-md-5 d-flex justify-content-center">
+					<div class="col-md-6 d-flex justify-content-center">
 						<a href="#" class="footer-link">
 							<img src="img/icon-telegram.svg" class="footer-icon" alt="icon">
 						</a>
@@ -327,14 +293,75 @@
 							<img src="img/icon-gmail.svg" class="footer-icon" alt="icon">
 						</a>
 					</div>
-					<div class="col-md-4 d-flex justify-content-end-md justify-content-center">
-						<p class="footer-text">Вы продавец? <a href="#" class="footer-user">Войти или создать аккаунт</a></p>
+					<div class="col-md-3 d-flex justify-content-md-end justify-content-center">
+						<p class="footer-text">Вы продавец? <a href="#" class="footer-user" data-toggle="modal" data-target="#registerModal">Войти или создать аккаунт</a></p>
 					</div>
 				</div>
 			</div>
 		</footer>
+		<!-- Modal -->
+		<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>					
+					<div class="modal-header">						
+						<button class="register-top-btn active" onclick="login(this)">Войти</button>
+						<button class="register-top-btn" onclick="register(this)">Регистрация</button>		
+					</div>
+					<div class="modal-body">
+						<form class="register-form register-login active" action="#!">
+							<input class="register-form-input" type="email" placeholder="Эл. Почта">
+							<input class="register-form-input" type="text" placeholder="Пароль">
+							<button class="register-form-btn btn btn-dark" type="submit">Отправить</button>
+						</form>
+						<form class="register-form register-registration" action="#!">
+							<input class="register-form-input" type="email" placeholder="Эл. Почта">
+							<input class="register-form-input" type="text" placeholder="Пароль">
+							<button class="register-form-btn btn btn-dark" type="submit">Отправить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<!-- Modal Purchase -->
+		<div class="modal fade" id="purchaseModal" tabindex="-1" role="dialog" aria-labelledby="purchaseModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <p class="purchase-name">Аккаунт IVI до 11.09.2021 (Закончится через 2 недели)</p>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		      	<label>
+		      		Email:
+		      		<input type="email" placeholder="Ваш email">
+		      	</label>
+					<label>
+						Cпособ оплаты:
+						<select class="wide">
+							<option value="1">QIWI WALLET, Банковские карты </option>
+							<option value="2">Enot</option>
+						</select>
+					</label>
+		      </div>
+	      	<p class="purchase-text">Все аккаунты проверяются на валидность перед выдачей. <br>
+	      	Наши письма могут попасть в папку спам </p>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary btn-modal" data-dismiss="modal">Закрыть</button>
+		        <button type="button" class="btn btn-dark btn-modal">Купить</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>			
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="slick/slick.min.js"></script>
+		<script type="text/javascript" src="js/jquery.prettydropdowns.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/slider.js"></script>
 	</body>
 </html>
