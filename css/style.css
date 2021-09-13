@@ -1366,6 +1366,10 @@ textarea {
   line-height: 25px;
   color: #000000;
 }
+.modal,
+.modal-open .modal {
+  overflow-y: auto !important;
+}
 .radio-wrap {
   position: relative;
   display: block;
@@ -1586,6 +1590,12 @@ textarea {
   .register-top-btn {
     font-size: 12px;
     padding: 9px 20px;
+  }
+  .modal-footer {
+    flex-direction: column;
+  }
+  .modal-footer .btn {
+    margin-bottom: 20px;
   }
 }
 .seller-table {

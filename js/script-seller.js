@@ -43,19 +43,19 @@ $(window).on("load resize",function(){
 		});
 
 		$(".notifications-wrap").mCustomScrollbar({
-		    axis:"y", // horizontal scrollbar
+		    axis:"y", // vertical scrollbar
 		    advanced:{ autoExpandHorizontalScroll: true },
 		    theme:"dark",
-		    scrollInertia: 150,
+		    scrollInertia: 300,
 		    scrollbarPosition: "inside"
 
 		});
 
 		$(".account-seller").mCustomScrollbar({
-		    axis:"y", // horizontal scrollbar
+		    axis:"y", // vertical scrollbar
 		    advanced:{ autoExpandHorizontalScroll: true },
 		    theme:"dark",
-		    scrollInertia: 100,
+		    scrollInertia: 250,
 
 		});
 
@@ -113,7 +113,7 @@ $("html").click(function () {
 
 
 /************** Мобильное меню **************/
-
+/*
 
 // scroll enable || disable
 var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
@@ -148,27 +148,27 @@ function enableScroll() {
     window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
     window.removeEventListener('touchmove', preventDefault, wheelOpt);
     window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-}
+} */
 
 // Header Menu
 var headerButton = document.querySelector(".menu-button");
 var headerMenu = document.querySelector(".aside-wrap");
 var menuOpened = false;
 var menuToggle = function () {
-    checkMenuClass();
+    //checkMenuClass();
     menuOpened = !menuOpened;
     headerButton.classList.toggle("open");
     headerMenu.classList.toggle("open");
 };
-
+/*
 function checkMenuClass() {
     if (menuOpened == false) {
         disableScroll();
     }
     else {
         enableScroll();
-    }
-}  
+    } 
+}  */
 headerButton.onclick = menuToggle;
 window.onclick = function (e) {
     if (menuOpened &&
@@ -177,26 +177,7 @@ window.onclick = function (e) {
         menuToggle();
 };
 
-var isMobile = {
-	Android: function() {
-		return navigator.userAgent.match(/Android/i);
-	},
-	BlackBerry: function() {
-		return navigator.userAgent.match(/BlackBerry/i);
-	},
-	iOS: function() {
-		return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-	},
-	Opera: function() {
-		return navigator.userAgent.match(/Opera Mini/i);
-	},
-	Windows: function() {
-		return navigator.userAgent.match(/IEMobile/i);
-	},
-	any: function() {
-		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-	}
-};
+
 
 
 // Data Tables
