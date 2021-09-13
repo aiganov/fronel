@@ -91,25 +91,7 @@ $("html").click(function () {
 
 
 
-// Data Tables
 
-$(document).ready(function(){    
-   var table= $('#seller_table').DataTable({
-        paging: false,
-
-        "sDom":"ltipr",
-        "info": false,
-            responsive: {
-        details: {
-            type: 'inline'
-        }}
-    });
-
-    $('#myInput').keyup(function(){
-      table.search($(this).val()).draw() ;
-})
-
-});
 
 
 /************** Мобильное меню **************/
@@ -152,7 +134,7 @@ function enableScroll() {
 
 // Header Menu
 var headerButton = document.querySelector(".menu-button");
-var headerMenu = document.querySelector(".nav");
+var headerMenu = document.querySelector(".aside-wrap");
 var menuOpened = false;
 var menuToggle = function () {
     checkMenuClass();
@@ -176,3 +158,60 @@ window.onclick = function (e) {
         !e.composedPath().includes(headerMenu))
         menuToggle();
 };
+
+var isMobile = {
+	Android: function() {
+		return navigator.userAgent.match(/Android/i);
+	},
+	BlackBerry: function() {
+		return navigator.userAgent.match(/BlackBerry/i);
+	},
+	iOS: function() {
+		return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+	},
+	Opera: function() {
+		return navigator.userAgent.match(/Opera Mini/i);
+	},
+	Windows: function() {
+		return navigator.userAgent.match(/IEMobile/i);
+	},
+	any: function() {
+		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+	}
+};
+
+if(!isMobile.any()) {
+	// Initialize custom scrollbar
+	$(".radio-wrap").mCustomScrollbar({
+		autoHideScrollbar: true
+	});
+
+	$(".account-seller").mCustomScrollbar({
+		autoHideScrollbar: true
+	});
+
+	$(".notifications-wrap").mCustomScrollbar({
+		autoHideScrollbar: true
+	});		
+}
+
+
+// Data Tables
+
+$(document).ready(function(){    
+   var table= $('#seller_table').DataTable({
+        paging: false,
+
+        "sDom":"ltipr",
+        "info": false,
+            responsive: {
+        details: {
+            type: 'inline'
+        }}
+    });
+
+    $('#myInput').keyup(function(){
+      table.search($(this).val()).draw() ;
+})
+
+});
