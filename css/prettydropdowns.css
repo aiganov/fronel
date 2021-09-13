@@ -95,11 +95,11 @@
 }
 .prettydropdown.arrow > ul > li.selected:before, .prettydropdown.arrow > ul > li.selected:after {
   position: absolute;
-  top: 8px;
+  top: 4px;
   bottom: 0;
   right: 8px;
-  height: 16px;
-  width: 34px;
+  height: 6px;
+  width: 12px;
   
   box-sizing: border-box;
   content: '';
@@ -113,7 +113,7 @@
   border-width: 4px;
 }
 .prettydropdown.arrow > ul > li.selected:before {
-  background: url("../img/arrow-bottom.png") no-repeat;
+  background: url("../img/arrow-bottom-small.png") no-repeat;
 }
 .prettydropdown.arrow > ul > li.selected:after {
   top: 4px; /* Chevron thickness */
@@ -135,7 +135,7 @@
 
 .prettydropdown > ul.active > li.selected:before {
   transform: rotate(180deg);
-  background: url("../img/arrow-bottom.png") no-repeat;
+  background: url("../img/arrow-bottom-small.png") no-repeat;
 }
 
 .prettydropdown > ul:not(.active) > li.selected::after {

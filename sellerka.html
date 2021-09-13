@@ -1,0 +1,527 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+	<head>
+		<meta charset = "utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<title>Селлерка - Fronel</title>   	
+    	<link href="css/bootstrap.min.css" rel="stylesheet">
+    	<link href="css/normalize.css" rel="stylesheet">
+    	<link href="css/datatables.min.css" rel="stylesheet">
+    	<link href="css/responsive.dataTables.min.css" rel="stylesheet">
+    	<link href="css/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    	<link href="css/ldbtn.min.css" rel="stylesheet">
+    	<link href="css/loading.min.css" rel="stylesheet">
+    	<link href="css/animate.min.css" rel="stylesheet">  
+    	<link href="css/toastr.min.css" rel="stylesheet">   
+    	<link href="css/style.css" rel="stylesheet">   	
+	</head>
+	<body>
+		<div class="general-container">
+			<aside class="account-aside">
+				<div class="aside-wrap">
+					<div class="aside-container">
+						<a href="/" class="header-logo">
+							<p class="logo-head">FRONEL.COM</p>
+						</a>	
+						<img src="img/avatar.jpg" alt="avatar" class="account-avatar">	
+						<p class="account-name">Евгений Онегин</p>	
+						<p class="account-mail">lenaivanovna590@gmail.com</p>	
+						<button class="btn btn-dark btn-privilege" data-toggle="modal" data-target="#privilegeModal">Привелегии аккаунта</button>
+						<ul class="aside-menu">
+							<li>
+								<a href="#">
+									<span class="menu-icon">
+										<img src="img/icon-menu-home.svg">
+									</span>
+									Главная
+								</a>
+							</li>
+							<li>
+								<a href="#" data-toggle="modal" data-target="#addModal">
+									<span class="menu-icon">
+										<img src="img/icon-menu-plus.svg">
+									</span>
+									Добавить аккаунты
+								</a>
+							</li>
+							<li>
+								<a href="#" data-toggle="modal" data-target="#withdrawModal">
+									<span class="menu-icon">
+										<img src="img/icon-menu-card.svg">
+									</span>								
+									Вывод средств
+								</a>
+							</li>
+							<li>
+								<a href="faq.html" class="active">
+									<span class="menu-icon">
+										<img src="img/icon-menu-faq.svg">
+									</span>								
+									F.A.Q
+								</a>
+							</li>
+							<li class="logout">
+								<a href="#">
+									<span class="menu-icon">
+										<img src="img/icon-menu-logout.svg">
+									</span>							
+									Выйти
+								</a>								
+							</li>
+						</ul>				
+					</div>					
+				</div>
+			</aside>
+			<main class="account-seller">
+				<div class="seller-container">
+					<button class="menu-button">
+						<span class="menu-button-line"></span>
+					</button>	
+					<div class="seller-head">
+						<h1 class="title">Ваши Аккаунты</h1>
+						<div class="seller-head-right">
+							<span class="notifications notifications-active"></span>
+							<div class="notifications-wrap">
+								<div class="notifications-head">
+									<p class="notifications-title">Уведомления</p>
+								</div>
+								<div class="notifications-body">
+									<a href="#" class="notification-label">
+										<div class="notification-img">
+											<img src="img/notification-img.png" alt="notification">
+										</div>
+										<div class="notification-desc">
+											<div class="notification-text">Вы продали аккаунт category за price рублей</div>
+											<div class="notification-time">50 минут назад</div>
+										</div>
+									</a>
+									<a href="#" class="notification-label">
+										<div class="notification-img">
+											<img src="img/notification-img.png" alt="notification">
+										</div>
+										<div class="notification-desc">
+											<div class="notification-text">Вы продали аккаунт category за price рублей</div>
+											<div class="notification-time">50 минут назад</div>
+										</div>
+									</a>
+									<a href="#" class="notification-label">
+										<div class="notification-img">
+											<img src="img/notification-img.png" alt="notification">
+										</div>
+										<div class="notification-desc">
+											<div class="notification-text">Вы продали аккаунт category за price рублей</div>
+											<div class="notification-time">50 минут назад</div>
+										</div>
+									</a>
+									<a href="#" class="notification-label">
+										<div class="notification-img">
+											<img src="img/notification-img.png" alt="notification">
+										</div>
+										<div class="notification-desc">
+											<div class="notification-text">Вы продали аккаунт category за price рублей</div>
+											<div class="notification-time">50 минут назад</div>
+										</div>
+									</a>
+									<a href="#" class="notification-label">
+										<div class="notification-img">
+											<img src="img/notification-img.png" alt="notification">
+										</div>
+										<div class="notification-desc">
+											<div class="notification-text">Вы продали аккаунт category за price рублей</div>
+											<div class="notification-time">50 минут назад</div>
+										</div>
+									</a>
+									<a href="#" class="notification-label">
+										<div class="notification-img">
+											<img src="img/notification-img.png" alt="notification">
+										</div>
+										<div class="notification-desc">
+											<div class="notification-text">Вы продали аккаунт category за price рублей</div>
+											<div class="notification-time">50 минут назад</div>
+										</div>
+									</a>
+									<a href="#" class="notification-label">
+										<div class="notification-img">
+											<img src="img/notification-img.png" alt="notification">
+										</div>
+										<div class="notification-desc">
+											<div class="notification-text">Вы продали аккаунт category за price рублей</div>
+											<div class="notification-time">50 минут назад</div>
+										</div>
+									</a>
+									<a href="#" class="notification-label">
+										<div class="notification-img">
+											<img src="img/notification-img.png" alt="notification">
+										</div>
+										<div class="notification-desc">
+											<div class="notification-text">Вы продали аккаунт category за price рублей</div>
+											<div class="notification-time">50 минут назад</div>
+										</div>
+									</a>																																																															
+																																																															
+								</div>
+							</div>
+							<span class="table-search-wrap">
+								<input type="text" id="myInput" placeholder="Поиск">	
+							</span>
+						</div>
+					</div>
+					<div class="seller-content seller-table">
+						<table id="seller_table" class="display" style="width:100%;">
+						    <thead>
+						        <tr>
+						            <th>ID</th>
+						            <th>Логин</th>
+						            <th>Пароль</th>
+						            <th>Цена</th>
+						            <th>Категория</th>
+						            <th>Дата добавления</th>
+						            <th>Управление</th>       
+						        </tr>
+						    </thead>
+						    <tbody>
+						        <tr>
+						            <td>1629364196</td>
+						            <td>I2W6ENF6TTR3@MAIL.RU</td>
+						            <td>f6ttr3</td>
+						            <td>25</td>
+						            <td>NordVPN</td>
+						            <td>1 неделю назад</td>
+						            <td><button class="btn btn-dark">Поднять</button></td>
+						        </tr>
+						        <tr>
+						            <td>1629364196</td>
+						            <td>I2W6ENF6TTR3@MAIL.RU</td>
+						            <td>f6ttr3</td>
+						            <td>25</td>
+						            <td>NordVPN</td>
+						            <td>1 неделю назад</td>
+						            <td><button class="btn btn-dark">Поднять</button></td>
+						        </tr>
+						        <tr>
+						            <td>1629364196</td>
+						            <td>I2W6ENF6TTR3@MAIL.RU</td>
+						            <td>f6ttr3</td>
+						            <td>25</td>
+						            <td>NordVPN</td>
+						            <td>1 неделю назад</td>
+						            <td><button class="btn btn-dark">Поднять</button></td>
+						        </tr>
+						        <tr>
+						            <td>1629364196</td>
+						            <td>I2W6ENF6TTR3@MAIL.RU</td>
+						            <td>f6ttr3</td>
+						            <td>25</td>
+						            <td>NordVPN</td>
+						            <td>1 неделю назад</td>
+						            <td><button class="btn btn-dark">Поднять</button></td>
+						        </tr>
+						        <tr>
+						            <td>1629364196</td>
+						            <td>I2W6ENF6TTR3@MAIL.RU</td>
+						            <td>f6ttr3</td>
+						            <td>24</td>
+						            <td>NordVPN</td>
+						            <td>1 неделю назад</td>
+						            <td><button class="btn btn-dark">Поднять</button></td>
+						        </tr>
+						        <tr>
+						            <td>1629364196</td>
+						            <td>I2W6ENF6TTR3@MAIL.RU</td>
+						            <td>f6ttr3</td>
+						            <td>23</td>
+						            <td>NordVPN</td>
+						            <td>1 неделю назад</td>
+						            <td><button class="btn btn-dark">Поднять</button></td>
+						        </tr>
+						        <tr>
+						            <td>1629364196</td>
+						            <td>I2W6ENF6TTR3@MAIL.RU</td>
+						            <td>f6ttr3</td>
+						            <td>23</td>
+						            <td>NordVPN</td>
+						            <td>1 неделю назад</td>
+						            <td><button class="btn btn-dark">Поднять</button></td>
+						        </tr>
+						        <tr>
+						            <td>1629364196</td>
+						            <td>I2W6ENF6TTR3@MAIL.RU</td>
+						            <td>f6ttr3</td>
+						            <td>23</td>
+						            <td>NordVPN</td>
+						            <td>1 неделю назад</td>
+						            <td><button class="btn btn-dark">Поднять</button></td>
+						        </tr>
+						        <tr>
+						            <td>1629364196</td>
+						            <td>I2W6ENF6TTR3@MAIL.RU</td>
+						            <td>f6ttr3</td>
+						            <td>23</td>
+						            <td>NordVPN</td>
+						            <td>1 неделю назад</td>
+						            <td><button class="btn btn-dark">Поднять</button></td>
+						        </tr>
+						        <tr>
+						            <td>1629364196</td>
+						            <td>I2W6ENF6TTR3@MAIL.RU</td>
+						            <td>f6ttr3</td>
+						            <td>23</td>
+						            <td>NordVPN</td>
+						            <td>1 неделю назад</td>
+						            <td><button class="btn btn-dark">Поднять</button></td>
+						        </tr>
+						        <tr>
+						            <td>1629364196</td>
+						            <td>I2W6ENF6TTR3@MAIL.RU</td>
+						            <td>f6ttr3</td>
+						            <td>23</td>
+						            <td>NordVPN</td>
+						            <td>1 неделю назад</td>
+						            <td><button class="btn btn-dark">Поднять</button></td>
+						        </tr>
+						        <tr>
+						            <td>1629364196</td>
+						            <td>I2W6ENF6TTR3@MAIL.RU</td>
+						            <td>f6ttr3</td>
+						            <td>23</td>
+						            <td>NordVPN</td>
+						            <td>1 неделю назад</td>
+						            <td><button class="btn btn-dark">Поднять</button></td>
+						        </tr>
+						        <tr>
+						            <td>1629364196</td>
+						            <td>I2W6ENF6TTR3@MAIL.RU</td>
+						            <td>f6ttr3</td>
+						            <td>23</td>
+						            <td>NordVPN</td>
+						            <td>1 неделю назад</td>
+						            <td><button class="btn btn-dark">Поднять</button></td>
+						        </tr>
+						        <tr>
+						            <td>1629364196</td>
+						            <td>I2W6ENF6TTR3@MAIL.RU</td>
+						            <td>f6ttr3</td>
+						            <td>23</td>
+						            <td>NordVPN</td>
+						            <td>1 неделю назад</td>
+						            <td><button class="btn btn-dark">Поднять</button></td>
+						        </tr>
+						        <tr>
+						            <td>1629364196</td>
+						            <td>I2W6ENF6TTR3@MAIL.RU</td>
+						            <td>f6ttr3</td>
+						            <td>23</td>
+						            <td>NordVPN</td>
+						            <td>1 неделю назад</td>
+						            <td><button class="btn btn-dark">Поднять</button></td>
+						        </tr>
+						        <tr>
+						            <td>1629364196</td>
+						            <td>I2W6ENF6TTR3@MAIL.RU</td>
+						            <td>f6ttr3</td>
+						            <td>23</td>
+						            <td>NordVPN</td>
+						            <td>1 неделю назад</td>
+						            <td><button class="btn btn-dark">Поднять</button></td>
+						        </tr>
+						        <tr>
+						            <td>1629364196</td>
+						            <td>I2W6ENF6TTR3@MAIL.RU</td>
+						            <td>f6ttr3</td>
+						            <td>23</td>
+						            <td>NordVPN</td>
+						            <td>1 неделю назад</td>
+						            <td><button class="btn btn-dark">Поднять</button></td>
+						        </tr>						        						        						        						        						        						        						        						        				        						        
+
+						    </tbody>
+						</table>												
+					</div>
+				</div>
+			</main>
+		</div>
+
+
+		<!-- Modal Withdraw -->
+		<div class="modal fade" id="withdrawModal" tabindex="-1" role="dialog" aria-labelledby="withdrawModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			 <div class="modal-content">
+			   <div class="modal-body">
+			     <p class="withdraw-title">Вывод средств</p>
+			     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			       <span aria-hidden="true">&times;</span>
+			     </button>			   	
+			   	<label>
+			   		Ваш номер:
+			   		<span></span>
+			   		<input type="tel" placeholder="Номер телефона">
+			   	</label>
+					<label>
+						Сумма:
+						<span></span>
+						<input type="number" placeholder="0">
+					</label>
+					<p class="withdraw-text">
+						Выводы осуществляются только на qiwi <br>
+						Минимальная сумма вывода - 15 руб
+					</p>
+			   </div>
+			   <div class="modal-footer">
+			     <button type="button" class="btn btn-secondary btn-modal" data-dismiss="modal">Закрыть</button>
+			     <button type="button" class="btn btn-dark btn-modal">Отправить</button>
+			   </div>
+			 </div>
+			</div>
+		</div>	
+
+		<!-- Modal Add Account -->
+		<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			 <div class="modal-content">
+			   <div class="modal-body">
+					<p class="withdraw-title">Добавить аккаунт</p>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>		
+					<div class="radio-wrap">
+						<input type="radio" name="g" checked id="radio-moretv">
+						<label for="radio-moretv">more.tv </label>
+						<input type="radio" name="g" id="radio-ivi">	
+						<label for="radio-ivi">IVI</label>
+						<input type="radio" name="g" id="radio-windscribe">
+						<label for="radio-windscribe">Windscribe</label>
+						<input type="radio" name="g" id="radio-nordvpn">
+						<label for="radio-nordvpn">NordVpn</label>
+						<input type="radio" name="g" id="radio-nordvpn">
+						<label for="radio-nordvpn">NordVpn</label>
+						<input type="radio" name="g" id="radio-nordvpn">
+						<label for="radio-nordvpn">NordVpn</label>
+					</div>
+					<p class="add-text" >Вставьте сюда аккаунты вида login:pass, каждый аккаунт <br>
+					должен начинаться с новой строки</p>
+					<textarea placeholder="Kolyan2010:hacker1337"></textarea>
+					<p class="add-comment">Комментарий покупателю</p>
+			   </div>
+			   <div class="modal-footer">
+			     <button type="button" class="btn btn-secondary btn-modal" data-dismiss="modal">Закрыть</button>
+			     <button type="button" class="btn btn-dark btn-modal" data-dismiss="modal" data-toggle="modal" data-target="#checkModal">Проверить аккаунт</button>
+			   </div>
+			 </div>
+			</div>
+		</div>	
+
+		<!-- Modal Check -->
+		<div class="modal fade" id="checkModal" tabindex="-1" role="dialog" aria-labelledby="checkModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			 <div class="modal-content">
+			   <div class="modal-body">
+					<p class="check-title">Проверка аккаунтов</p>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>			   	
+					<p class="check-text">
+						Пожалуйста, не закрывайте страницу, мы проверяем ваши аккаунты.<br>
+						Вы можете закрыть это окно, вся информация проверяется в фоновом режиме.
+					</p>
+					<p class="check-mail">Test@yandex.ru</p>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>	
+					<p class="check-approve">Аккаунт успешно добавлен</p>	
+					<div class="modal-footer">
+						<button type="button" class="btn btn-dark btn-modal" data-dismiss="modal">Закрыть</button>
+					</div>								
+			   </div>
+			 </div>
+			</div>
+		</div>
+
+		<!-- Modal Privilege -->
+		<div class="modal fade" id="privilegeModal" tabindex="-1" role="dialog" aria-labelledby="privilegeModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			 <div class="modal-content">
+			   <div class="modal-body">
+					<p class="privilege-title">Проверка аккаунтов</p>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>			   	
+					<div class="priveleges-wrap">
+						<div class="card product-item shop-item-message animate__animated animate__fadeInUp" >
+							<div class="card-img-wrap">
+								<img class="card-img-top" src="img/icon-chevron.svg" alt="Card image cap" width="33" height="33">
+								<p class="card-img-message">Ваши аккаунты будут автоматически подниматься в топе в течении суток</p>
+							</div>
+							<div class="card-body">
+						 		<p class="card-desc">Автоматическое поднятие ваших аккаунтов</p>
+						 		<p class="card-price">200<span class="ruble-white"></span>/месяц</p>
+						 		<button class="btn btn-dark ld-ext-right" onclick="this.classList.toggle('running')">
+						 			Купить
+						 			<div class="ld ld-ring ld-spin"></div>
+						 		</button>
+						 		<a href="#" class="purchased-text purchased-link">Закончится через 1 месяц</a>
+							</div>
+						</div>
+						<div class="card product-item shop-item-message animate__animated animate__fadeInUp" >
+							<div class="card-img-wrap">
+								<img class="card-img-top" src="img/icon-group.svg" alt="Card image cap" width="33" height="33">
+								<p class="card-img-message">Вы сможете поднимать до 10 аккаунтов в день</p>
+							</div>
+							<div class="card-body">
+						 		<p class="card-desc">NordVPN Premium с подпиской до 2022 года</p>
+						 		<p class="card-price">200<span class="ruble-white"></span>/месяц</p>
+						 		<button class="btn btn-dark ld-ext-right" onclick="this.classList.toggle('running')">
+						 			Купить
+						 			<div class="ld ld-ring ld-spin"></div>
+						 		</button>
+						 		<p class="purchased-text purchased-date">2021</p>
+							</div>						
+						</div>
+						<div class="card card-purchased product-item shop-item-message animate__animated animate__fadeInUp" >
+							<div class="card-img-wrap">
+								<img class="card-img-top" src="img/icon-chevron.svg" alt="Card image cap" width="33" height="33">
+								<p class="card-img-message">Ваши аккаунты будут автоматически подниматься в топе в течении суток</p>
+							</div>
+							<div class="card-body">
+						 		<p class="card-desc">Автоматическое поднятие ваших аккаунтов</p>
+						 		<p class="card-price">200<span class="ruble-white"></span>/месяц</p>
+						 		<button class="btn btn-dark ld-ext-right" onclick="this.classList.toggle('running')">
+						 			Купить
+						 			<div class="ld ld-ring ld-spin"></div>
+						 		</button>
+						 		<a href="#" class="purchased-text purchased-link">Закончится через 1 месяц</a>
+							</div>
+						</div>
+						<div class="card card-purchased product-item shop-item-message animate__animated animate__fadeInUp" >
+							<div class="card-img-wrap">
+								<img class="card-img-top" src="img/icon-group.svg" alt="Card image cap" width="33" height="33">
+								<p class="card-img-message">Вы сможете поднимать до 10 аккаунтов в день</p>
+							</div>
+							<div class="card-body">
+						 		<p class="card-desc">Увеличение количества поднимаемых аккаунтов</p>
+						 		<p class="card-price">200<span class="ruble-white"></span>/месяц</p>
+						 		<button class="btn btn-dark ld-ext-right" onclick="this.classList.toggle('running')">
+						 			Купить
+						 			<div class="ld ld-ring ld-spin"></div>
+						 		</button>
+						 		<p class="purchased-text purchased-date">2021</p>
+							</div>						
+						</div>						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary btn-modal" data-dismiss="modal">Закрыть</button>
+					</div>								
+			   </div>
+			 </div>
+			</div>
+		</div>		
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/datatables.min.js"></script>
+		<script type="text/javascript" src="js/dataTables.responsive.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>		
+		<script type="text/javascript" src="js/toastr.min.js"></script>	
+		<script type="text/javascript" src="js/script.js"></script>
+
+	</body>
+</html>
