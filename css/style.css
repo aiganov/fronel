@@ -1166,6 +1166,9 @@ tbody td button {
   .general-container {
     flex-direction: column;
   }
+  .account-seller {
+    overflow-y: auto;
+  }
   .aside-wrap {
     width: 80%;
     transform: translate(-300%);

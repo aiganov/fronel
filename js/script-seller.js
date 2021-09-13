@@ -29,28 +29,46 @@ window.onclick = function (e) {
 
 // Custom Scroll
 
-$(".radio-wrap").mCustomScrollbar({
-    axis:"x", // horizontal scrollbar
-    setLeft: 0,
-    advanced:{ autoExpandHorizontalScroll: true },
-    theme:"dark"
-});
 
-$(".notifications-wrap").mCustomScrollbar({
-    axis:"y", // horizontal scrollbar
-    advanced:{ autoExpandHorizontalScroll: true },
-    theme:"dark",
-    scrollInertia: 150,
-    scrollbarPosition: "inside"
 
-});
 
-$(".account-seller").mCustomScrollbar({
-    axis:"y", // horizontal scrollbar
-    advanced:{ autoExpandHorizontalScroll: true },
-    theme:"dark",
-    scrollInertia: 100,
+$(window).on("load resize",function(){
+  if(window.matchMedia("(min-width: 992px)").matches){
+     
+		$(".radio-wrap").mCustomScrollbar({
+		    axis:"x", // horizontal scrollbar
+		    setLeft: 0,
+		    advanced:{ autoExpandHorizontalScroll: true },
+		    theme:"dark"
+		});
 
+		$(".notifications-wrap").mCustomScrollbar({
+		    axis:"y", // horizontal scrollbar
+		    advanced:{ autoExpandHorizontalScroll: true },
+		    theme:"dark",
+		    scrollInertia: 150,
+		    scrollbarPosition: "inside"
+
+		});
+
+		$(".account-seller").mCustomScrollbar({
+		    axis:"y", // horizontal scrollbar
+		    advanced:{ autoExpandHorizontalScroll: true },
+		    theme:"dark",
+		    scrollInertia: 100,
+
+		});
+
+
+
+
+
+
+  }else{
+      $(".radio-wrap").mCustomScrollbar("destroy");
+      $(".notifications-wrap").mCustomScrollbar("destroy");
+      $(".account-seller").mCustomScrollbar("destroy");
+  }
 });
 
 
@@ -179,21 +197,6 @@ var isMobile = {
 		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 	}
 };
-
-if(!isMobile.any()) {
-	// Initialize custom scrollbar
-	$(".radio-wrap").mCustomScrollbar({
-		autoHideScrollbar: true
-	});
-
-	$(".account-seller").mCustomScrollbar({
-		autoHideScrollbar: true
-	});
-
-	$(".notifications-wrap").mCustomScrollbar({
-		autoHideScrollbar: true
-	});		
-}
 
 
 // Data Tables
