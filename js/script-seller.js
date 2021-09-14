@@ -91,7 +91,7 @@ $("html").click(function () {
     removeClass = true;
 });
 
-
+/*
 
 // Toast Notifications
 
@@ -108,7 +108,7 @@ $("html").click(function () {
         });
 
 
-
+*/
 
 
 

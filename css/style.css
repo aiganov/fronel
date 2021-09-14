@@ -1099,6 +1099,9 @@ tbody td button {
   opacity: 0;
   transition: opacity 250ms;
 }
+.notifications-wrap .mCSB_container {
+  overflow: visible !important;
+}
 .notifications-wrap-active {
   visibility: visible;
   opacity: 1;
@@ -1113,9 +1116,8 @@ tbody td button {
   max-height: 71px !important;
 }
 .notifications-head {
-  text-align: center;
-  background: #222220;
-  border-radius: 9px 9px 0px 0px;
+  position: sticky;
+  top: 0;
 }
 .notifications-head p {
   margin: 0;
@@ -1124,6 +1126,9 @@ tbody td button {
   font-size: 14.3613px;
   line-height: 17px;
   color: #FFFFFF;
+  text-align: center;
+  background: #222220;
+  border-radius: 9px 9px 0px 0px;
 }
 .notifications-body {
   padding-bottom: 19px;
@@ -1133,6 +1138,9 @@ tbody td button {
   align-items: center;
   padding: 7px 16px;
   border-bottom: 1px solid rgba(34, 34, 32, 0.1);
+}
+.notification-label:hover {
+  text-decoration: none;
 }
 .notification-img {
   margin-right: 17px;
@@ -1160,6 +1168,17 @@ tbody td button {
   }
   .aside-menu li a {
     font-size: 16px;
+  }
+}
+@media (max-width: 1200px) {
+  .seller-content.seller-table {
+    padding: 20px;
+  }
+  thead th {
+    padding: 0 7px !important;
+  }
+  tbody td {
+    padding: 0 7px;
   }
 }
 @media (max-width: 992px) {
@@ -1218,18 +1237,25 @@ tbody td button {
     line-height: 1.1;
   }
   thead th {
-    padding: 0 8px;
+    padding: 0 10px !important;
   }
   tbody td button {
     margin-top: 7px;
   }
   tbody td {
-    padding: 0 7px;
+    padding: 0 10px;
+  }
+  tbody .btn {
+    font-size: 10px !important;
   }
 }
 /* ============== МОДАЛЬНЫЕ ОКНА ============== */
 .modal {
   padding-right: 0 !important;
+}
+.modal .btn {
+  font-weight: bold;
+  box-shadow: none;
 }
 .modal-dialog {
   max-width: 520px;
@@ -1322,8 +1348,8 @@ textarea {
   background: #E2E2E2;
   border-radius: 15px;
   border: none;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 14px !important;
+  line-height: 16px !important;
   color: rgba(0, 0, 0, 0.9);
 }
 .register-form-input:focus,
@@ -1335,6 +1361,31 @@ textarea:focus {
 textarea {
   padding-top: 25px;
   height: 150px;
+}
+input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #222220;
+}
+input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #222220;
+}
+input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #222220;
+}
+input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #222220;
+}
+input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #222220;
+}
+input::placeholder,
+textarea::placeholder {
+  /* Most modern browsers support this now. */
+  color: #222220;
 }
 .register-form-btn {
   width: 100%;
@@ -1411,6 +1462,7 @@ textarea {
   color: #000000;
 }
 .add-comment {
+  height: 30px;
   margin-top: 5px;
   padding: 8px;
   font-weight: 600;
@@ -1584,6 +1636,17 @@ textarea {
     left: 0;
     right: 0;
     margin-bottom: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .register-form-input,
+  input,
+  textarea {
+    font-size: 12px !important;
+    line-height: 14px !important;
+  }
+  .modal-footer > :not(:first-child) {
+    margin-left: 0;
   }
 }
 @media (max-width: 400px) {

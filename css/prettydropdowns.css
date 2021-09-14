@@ -17,10 +17,10 @@
   box-sizing: content-box;
   color: #000;
   cursor: pointer;
-  font-size: 9.26955px;
-  line-height: 11px;
+  font-size: 14px;
+  line-height: 16px;
   /* identical to box height */
-
+  font-weight: 500;
 
   color: rgba(34, 34, 32, 0.9);  
   list-style-type: none;
@@ -186,4 +186,15 @@
 .prettydropdown.multiple > ul > li.selected + li, .prettydropdown.multiple > ul.reverse > li.selected,
 .prettydropdown > ul > li.label, .prettydropdown > ul > li.label ~ li.selected {
   border-top-color: #dedede;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .prettydropdown > ul {
+    font-size: 12px;
+    line-height: 14
+  }
+
 }
